@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="jquery.serializejson.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="javascripts/chat.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="javascripts/chat_ui.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+    <style>
+
+    .chat-box {
+      list-style: none;
+      padding-left: 20px;
+      width: 300px;
+      height: 200px;
+      overflow-y: auto;
+      border: 1px solid black;
+      margin-bottom: 20px;
+    }
+
+
+    div.users-list {
+      list-style: none;
+      width: 100px;
+      border: 1px solid blue;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <h3 >chat message box</h3>
+    <div class="wrapper"><div class="chat-box"></div>
+        <div class="users-list"></div>
+    </div>
+    <div class="room-list"></div>
+    <br>
+    <form class="chat-form">
+      <label for="message:_">message: </label><input class="chat-text" type="text" name="text" value="" id="message:_">
+
+      <button>Submit message</button>
+    </form>
+    <br><br>
+    <form class="nickname-form">
+      <label for="username">Enter nickname here</label><input type="text" name="username" id="username">
+      <button>change nickname</button>
+    </form>
+    <br>
+    <div class="name-status"></div>
+
+    <script>
+      $(function () {
+        var chat_ui = new ChatApp.ChatUi();
+
+
+      })
+    </script>
+
+  </body>
+
+</html>
